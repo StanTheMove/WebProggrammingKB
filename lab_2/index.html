@@ -3,204 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV — Станіслав Холопкін ✨</title>
-    <!-- Підключаємо милий округлий шрифт з Google Fonts -->
+    <title>CV — Станіслав Холопкін</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --bg-color: #fff0f5;         /* Лавандовий рум'янець */
-            --card-bg: rgba(255, 255, 255, 0.85);
-            --primary-pink: #ff85a2;    /* Соковитий рожевий */
-            --soft-pink: #ffb7c5;       /* Пастельний рожевий */
-            --deep-pink: #e05275;
-            --text-color: #5a3d46;      /* М'який темний шоколадно-бордовий */
-            --accent-glow: rgba(255, 182, 193, 0.6);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Quicksand', 'Segoe UI', cursive, sans-serif;
-            background: linear-gradient(135deg, #ffeef2 0%, #fff0f5 50%, #fce4ec 100%);
-            background-attachment: fixed;
-            color: var(--text-color);
-            line-height: 1.7;
-            padding: 30px 15px;
-        }
-
-        /* Загальний контейнер */
-        header, main, footer {
-            max-width: 800px;
-            margin: 0 auto 25px auto;
-            background: var(--card-bg);
-            backdrop-filter: blur(8px);
-            border: 2px solid #ffd1dc;
-            border-radius: 24px;
-            padding: 30px;
-            box-shadow: 0 10px 25px var(--accent-glow);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        header:hover, section:hover, footer:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 28px rgba(255, 133, 162, 0.35);
-        }
-
-        /* Хедер */
-        header {
-            text-align: center;
-            border-bottom: 4px dashed var(--soft-pink);
-        }
-
-        h1 {
-            color: var(--deep-pink);
-            font-size: 2.3rem;
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 0px #ffe4e9;
-        }
-
-        h1::after {
-            content: " 🌸";
-        }
-
-        header p {
-            color: #8c5b68;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        /* Навігація */
-        nav ul {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            list-style: none;
-        }
-
-        nav a {
-            text-decoration: none;
-            background: #fff;
-            color: var(--deep-pink);
-            border: 2px solid var(--soft-pink);
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
-            transition: all 0.2s ease;
+        .badge {
             display: inline-block;
-        }
-
-        nav a:hover {
-            background: var(--primary-pink);
-            color: #fff;
-            border-color: var(--primary-pink);
-            transform: scale(1.07);
-        }
-
-        /* Секції */
-        section {
-            margin-bottom: 25px;
-            background: #ffffff;
-            border: 1.5px solid #ffe1e8;
-            border-radius: 18px;
-            padding: 22px;
-            box-shadow: 0 4px 12px rgba(255, 182, 193, 0.15);
-        }
-
-        section:last-child {
-            margin-bottom: 0;
-        }
-
-        h2 {
-            color: var(--deep-pink);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        h2::before {
-            content: "🎀";
-            font-size: 1.2rem;
-        }
-
-        h3 {
-            color: #a34860;
-            font-size: 1.15rem;
-            margin-top: 10px;
-        }
-
-        /* Списки */
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-top: 10px;
-        }
-
-        li {
-            position: relative;
-            padding-left: 26px;
-            margin-bottom: 8px;
-        }
-
-        li::before {
-            content: "✨";
-            position: absolute;
-            left: 0;
-            top: 1px;
-            font-size: 0.9rem;
-        }
-
-        strong {
-            color: var(--deep-pink);
-        }
-
-        article em {
-            display: inline-block;
-            background: #fff0f3;
-            color: var(--deep-pink);
-            padding: 2px 10px;
+            background-color: #ffe4e9;
+            color: #ff85a2;
+            padding: 3px 12px;
             border-radius: 12px;
             font-size: 0.85rem;
-            margin-bottom: 10px;
-            border: 1px solid #ffd1dc;
-        }
-
-        /* Футер і посилання контактів */
-        footer {
-            text-align: center;
-            border-top: 4px dashed var(--soft-pink);
-        }
-
-        footer a {
-            color: var(--deep-pink);
             font-weight: 700;
-            text-decoration: underline dotted var(--primary-pink);
-            transition: color 0.2s;
-        }
-
-        footer a:hover {
-            color: #c7254e;
-            text-decoration: underline solid #c7254e;
+            border: 1px dashed #ffa6b9;
         }
     </style>
 </head>
 <body>
-    <header>
+    <header id="main-header">
         <h1>Станіслав Холопкін</h1>
-        <p>Студент спеціальності «Кібербезпека» | Junior розробник</p>
+        <p style="letter-spacing: 0.5px;">Студент спеціальності «Кібербезпека» | Junior розробник</p>
         <nav>
             <ul>
                 <li><a href="#about">Про мене</a></li>
@@ -212,42 +39,55 @@
         </nav>
     </header>
 
-    <main>
-        <section id="about">
+    <main class="container">
+        <section id="about" class="card">
             <h2>Про мене</h2>
             <p>Студент Національного університету «Львівська політехніка». Захоплююся програмуванням, реверс-інжинірингом, криптографією та розробкою ігор.</p>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="card">
             <h2>Технічні навички</h2>
-            <ul>
-                <li><strong>Мови:</strong> Python, C#, HTML5, CSS3, JavaScript, C++</li>
-                <li><strong>Мережі та безпека:</strong> Cisco Packet Tracer, Wireshark, реляційні БД (SQL)</li>
-                <li><strong>Інструменти:</strong> Git, Linux, VS Code, JetBrains Rider</li>
-            </ul>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Мови</h3>
+                    <p>Python, C#, HTML5, CSS3, JavaScript, C++</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Мережі та безпека</h3>
+                    <p>Cisco Packet Tracer, Wireshark, SQL</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Інструменти</h3>
+                    <p>Git, Linux, VS Code, JetBrains Rider</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Спеціалізація</h3>
+                    <p><span class="badge">GameDev & Security</span></p>
+                </div>
+            </div>
         </section>
 
-        <section id="experience">
+        <section id="experience" class="card">
             <h2>Досвід роботи та проєкти</h2>
-            <article>
+            <article class="job-item">
                 <h3>Розробка вебзастосунків та навчальних проєктів</h3>
                 <p><em>2025 – 2026 роки</em></p>
                 <ul>
                     <li>Розробка відеоігор на Unity C#.</li>
-                    <li>Розробка безпечних вебмодулів автентифікації на Python (SHA-384, валідація, соління).</li>
+                    <li>Розробка безпечних вебмодулів автентифікації на Python (PBKDF2-HMAC, валідація, соління).</li>
                     <li>Розробка вебзастосунків на HTML5, CSS3 та JavaScript.</li>
                 </ul>
             </article>
         </section>
 
-        <section id="education">
+        <section id="education" class="card">
             <h2>Освіта</h2>
             <p>Національний університет «Львівська політехніка»</p>
             <p>Бакалавр, спеціальність: «Кібербезпека» (2025 – 2029)</p>
         </section>
     </main>
 
-    <footer id="contacts">
+    <footer id="contacts" class="card">
         <h2>Контакти</h2>
         <p>Email: <a href="https://youtu.be/dQw4w9WgXcQ?si=-PH-_oOb1voAVBmt">adam.hilt@student.lpnu.ua</a></p>
         <p>GitHub: <a href="https://youtu.be/dQw4w9WgXcQ?si=-PH-_oOb1voAVBmt" target="_blank" rel="noopener noreferrer">Профіль GitHub</a></p>

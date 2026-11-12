@@ -1,0 +1,224 @@
+:root {
+    --bg-color: #fff0f5;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --primary-pink: #fda9bd;
+    --soft-pink: #ffb7c5;
+    --deep-pink: #ffacc1;
+    --text-color: #5a3d46;
+    --accent-glow: rgba(255, 182, 193, 0.6);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', 'Segoe UI', cursive, sans-serif;
+    background: linear-gradient(135deg, #ffeef2 0%, #fff0f5 50%, #fce4ec 100%);
+    background-attachment: fixed;
+    color: var(--text-color);
+    line-height: 1.7;
+    padding: 30px 15px;
+}
+
+h1 {
+    color: var(--deep-pink);
+    font-size: 2.3rem;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0px #ffe4e9;
+}
+
+h1::after {
+    content: " 🌸";
+}
+
+h2 {
+    color: var(--deep-pink);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h2::before {
+    content: "🎀";
+    font-size: 1.2rem;
+}
+
+h3 {
+    color: #a34860;
+    font-size: 1.15rem;
+    margin-top: 10px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 8px;
+}
+
+li::before {
+    content: "✨";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-size: 0.9rem;
+}
+
+strong {
+    color: var(--deep-pink);
+}
+
+article em {
+    display: inline-block;
+    background: #fff0f3;
+    color: var(--deep-pink);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    border: 1px solid #ffd1dc;
+}
+
+#main-header {
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    border: 2px solid #ffd1dc;
+    border-bottom: 4px dashed var(--soft-pink);
+    border-radius: 24px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px var(--accent-glow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#contacts {
+    text-align: center;
+    border-top: 4px dashed var(--soft-pink);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    border: 2px solid #ffd1dc;
+    border-radius: 24px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px var(--accent-glow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    text-decoration: none;
+    background: #fff;
+    color: var(--deep-pink);
+    border: 2px solid var(--soft-pink);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.skill-category {
+    background: #ffffff;
+    border: 1.5px solid #ffe1e8;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(255, 182, 193, 0.15);
+}
+
+a[target="_blank"] {
+    font-weight: 700;
+    color: var(--deep-pink);
+    text-decoration: underline dotted var(--primary-pink);
+}
+
+.card:hover,
+#main-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(255, 133, 162, 0.35);
+}
+
+nav a:hover {
+    background: var(--primary-pink);
+    color: #fff;
+    border-color: var(--primary-pink);
+    transform: scale(1.07);
+}
+
+footer a:hover,
+a[target="_blank"]:hover {
+    color: #c7254e;
+    text-decoration: underline solid #c7254e;
+}
+
+nav a:focus,
+footer a:focus {
+    outline: 3px solid var(--primary-pink);
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    #main-header,
+    .card {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+}

@@ -1,9 +1,19 @@
 function Footer() {
   return (
-    <footer>
-      <h2>Контакти</h2>
-      <p>GitHub: <a href="https://youtu.be/dQw4w9WgXcQ?si=-PH-_oOb1voAVBmt" target="_blank" rel="noopener noreferrer">Профіль GitHub</a></p>
+    <footer className="bg-white p-6 rounded-xl shadow-md border border-slate-100 text-center">
+      <h2 className="text-lg font-bold text-slate-800 mb-2">Контакти</h2>
+      <div className="flex justify-center gap-4 text-sm font-medium">
+        <a 
+          href="https://github.com/StanTheMove" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-sky-600 hover:text-sky-800 hover:underline transition font-semibold"
+        >
+          GitHub: Профіль StanTheMove
+        </a>
+      </div>
     </footer>
   );
 }
+
 export default Footer;
